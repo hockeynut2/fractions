@@ -57,23 +57,3 @@ def output_fraction(fract_array)
   d = fract_array[1]
   puts "#{n}/#{d}"
 end
-
-def fract_to_decimal(n, d)
-  # converts fraction to a decimal
-  n = n.to_f
-  d = d.to_f
-  dec = n / d
-  dec
-end
-
-def dec_to_fract(dec)
-  # converts decimal to a fraction
-  d = 1
-  while dec % 1 != 0
-    dec = dec * 10
-    d = d * 10
-  end
-  dec.to_i
-  d.to_i
-  simplify([dec, d])
-end
